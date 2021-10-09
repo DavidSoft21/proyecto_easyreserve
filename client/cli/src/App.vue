@@ -1,0 +1,16 @@
+<template>
+  <div class="inicio">
+    <Menu/> 
+  </div>
+</template>
+
+<script>
+import Menu from '@/components/Menu.vue'
+
+export default {
+  name: "App",
+  components: {
+    Menu
+  }
+};
+</script>
