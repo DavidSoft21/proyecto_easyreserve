@@ -58,7 +58,13 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Habitaciones_presidenciales.vue')
   }
-  
+  ,
+  {
+    //envia a crear habitacion
+    path: '/Crear-habitacion',
+    name: 'Crear-habitacion',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Crear-habitacion')
+  }
 ]
 
 const router = new VueRouter({
