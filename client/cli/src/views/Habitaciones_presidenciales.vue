@@ -3,7 +3,7 @@
     <b-container>
           <b-card
       title="Habitación Presidencial"
-      img-src="https://cdn.easy-rez.com/production/hotels/916ea29afcb88633ac04452fc250f8ec/uploads/.rooms/th_habitacion-suite-presidencial.jpg_0.32469300-1469742656.jpg"
+      img-src="https://www.oceaniacruises.com/sites/default/files/marina-suit-and-state-rooms-hero-1024x480-oceania-suite.jpg"
       img-alt="Image"
       img-top
       tag="article"

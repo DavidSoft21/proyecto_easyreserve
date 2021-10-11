@@ -3,7 +3,7 @@
     <b-container>
           <b-card
       title="Habitacion sencilla"
-      img-src="https://www.stanzahotel.com/wp-content/uploads/2020/07/2020_stanza_hotel_habitacion_sencilla_01.jpg"
+      img-src="https://hotelseminariobilbao.com/wp-content/uploads/2017/08/02.Habitacion-Suite-1024x480.jpg"
       img-alt="Image"
       img-top
       tag="article"
