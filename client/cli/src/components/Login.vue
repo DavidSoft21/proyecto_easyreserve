@@ -37,6 +37,14 @@
                 required
               ></b-form-input>
             </b-form-group>
+            <div>
+              <div>
+                 <router-link to="/crear_cuenta">Iniciar Sesion</router-link>
+              </div>
+              <div>
+                 <router-link to="/reset_password">Olvido su contraseña?</router-link>
+              </div>
+            </div>
 
             <b-button type="submit" variant="primary">Ingresar</b-button>
           </b-form>
