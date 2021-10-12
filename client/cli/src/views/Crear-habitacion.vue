@@ -1,6 +1,6 @@
 <template>
   <div>
-     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+     <b-form @submit.prevent="crear_hab" @reset="onReset" v-if="show">
       <b-container>
 
 
@@ -15,8 +15,8 @@
 
 
       <label for="precio">Boton para precio</label>
-      <b-form-spinbutton id="precio" v-model="form.value" min="50000" max="100000000000" step="1000"></b-form-spinbutton>
-      <p>precio: {{ precio }}</p>
+      <b-form-spinbutton id="precio" v-model="form.precio" min="50000" max="100000000000" step="1000"></b-form-spinbutton>
+      <p>va: {{ this.form.precio }}</p>
 
 
       <b-form-group id="tipo_hab" label="tipo_hab:" label-for="tipo_hab">
@@ -55,25 +55,24 @@
       return {
         form: {
           nombre: '',
-          precio: 50000,
-          estado: []
+          precio: '',
+          estado: ''
         },
         tipo_hab: [{ text: 'Select One', value: null }, 'Habitaciones_junior', 'Habitaciones_presidenciales', 'Habitaciones_sencillas'],
         show: true
       }
     },
-    methods: {
-      onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
+  methods: {
+    crear_hab() {
+      console.log(this.form);
+    },
       onReset(event) {
         event.preventDefault()
         // Reset our form values
         this.form.nombre = ''
-        this.form.tipo_hab = null
-        this.form.precio = 50000
-        this.form.estado = []
+        this.form.tipo_hab = ''
+        this.form.precio = ''
+        this.form.estado = ''
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
