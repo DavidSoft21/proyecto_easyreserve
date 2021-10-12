@@ -13,7 +13,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Nombre</th>
+                <th scope="col">Nombre habitacion</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Estado</th>
@@ -22,8 +22,7 @@
         </thead>
         <tbody>
             <tr v-for="(item, index) in listaHab " :key="index">
-                <th scope="row">{{item.nombre}}</th>
-                
+                <th scope="row" >{{item.nombre}}</th>
                 <td>{{item.precio}}</td>
                 <td>{{item.fecha}}</td>
                 <td>{{item.estado}}</td>
