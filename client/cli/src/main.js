@@ -8,6 +8,7 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+//url base
 axios.defaults.baseURL = 'http://localhost:3000/api'
 
 Vue.use(BootstrapVue)

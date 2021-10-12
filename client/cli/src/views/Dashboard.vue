@@ -1,31 +1,34 @@
 <template>
-  <div class="dashboard">
+<div class="dashboard">
     <h1>Bienvenido Master</h1>
-    <b-button type="submit" variant="danger" @click="removerItem"
-      >cerrar sesion</b-button
-    >
+    <b-button type="submit" variant="danger" @click="removerItem">cerrar sesion</b-button>
 
-      <table class="table">
+
+    <!--TABLA-->
+    <div class="container">
+    <br>
+    <br>
+    <h4>Listado de habitaciones</h4>
+    <br>
+    <table class="table">
         <thead>
             <tr>
-                <!--<th scope="col">ID</th>
-                <th scope="col">TIPO HABITACION</th>
-                <th scope="col">DESCRIPCION</th>
-                <th scope="col">ACCION</th>-->
-                
-
-
-                <th scope="col">ID</th>
-                <th scope="col">NOTAS</th>
-                <th scope="col">DESCRIPCION</th>
-                <th scope="col">ACCION</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Tipo hab</th>
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(item, index) in notas" :key="index">
-                <th scope="row">{{item._id}}</th>
-                <td>{{item.tipo_habitacion}}</td>
-                <td>item.descripcion</td>
+            <tr v-for="(item, index) in listaHab " :key="index">
+                <th scope="row">{{item.nombre}}</th>
+                
+                <td>{{item.precio}}</td>
+                <td>{{item.fecha}}</td>
+                <td>{{item.estado}}</td>
+                <td>{{item.tipo_hab}}</td>
+                
 
                 <td>
 
@@ -33,33 +36,78 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
-
-  </div>
+</div>
 </template>
 
 <script>
 import Menu from "@/components/Menu.vue";
-export default {
-  name: "Dashboard",
-  beforeCreate() {
-    console.log("metodo beforeCreate");
-    var auth = window.localStorage.getItem("auth");
-    console.log("su autentificacion esta :" + auth);
 
-    if (auth !== "ok") {
-      console.log("no logged");
-      this.$router.push({ path: "/login" });
-    }
-  },
-  methods: {
-    removerItem() {
-      window.localStorage.removeItem("auth");
-      this.$router.push({ path: "/" });
+export default {
+
+    data() {
+        return {
+          listaHab:[]//array
+        }
     },
-  },
-  components: {
+
+    created(){
+      this.listarHabitaciones();
+    },
+
+
+
+    methods: {
+
+      listarHabitaciones(){//metodo
+        this.axios.get('/buscarTodo')
+        .then(res=>{
+          console.log(res.data);
+          this.listaHab=res.data;
+
+        })
+        .catch(e=>{
+          console.log(e.response);
+        })
+      },
+
+
+
+
+        removerItem() {
+            window.localStorage.removeItem("auth");
+            this.$router.push({
+                path: "/"
+            });
+        },
+    },
+
+
+
+
+    components: {
+
+    },
+
+
+
+
+
+    name: "Dashboard",
+    beforeCreate() {
+        console.log("metodo beforeCreate");
+        var auth = window.localStorage.getItem("auth");
+        console.log("su autentificacion esta :" + auth);
+
+        if (auth !== "ok") {
+            console.log("no logged");
+            this.$router.push({
+                path: "/login"
+            });
+        }
+    }
+
     
-  }
 };
 </script>
