@@ -16,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', require('./routes/accountRoutes'));
+app.use('/api', require('./routes/roomsBd'));
 
 //middleware for vue js
 const history = require('connect-history-api-fallback');

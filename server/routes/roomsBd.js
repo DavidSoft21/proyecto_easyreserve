@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 //importar el modelo 
-import roomsBd from '../models/rooomsBd';
+import roomsBd from '../models/roomsBd';
 
 
 
@@ -55,23 +55,45 @@ router.get('/buscarParametro/:id', async(req, res)=>{
 });
 
 //DELETE PARAMETRO
-router.delete('/eliminarParametro/:id', async (req, res)=>{
+router.delete('/eliminarParametro/:id', async(req, res)=>{
     const _id = req.params.id;
+
     try {
-        const rommsDb = await roomsDb.findByIdAndDelete({_id});
-        if(! roomsDb){
+        const roomsDb = await roomsBd.findByIdAndDelete({_id});
+        if(!roomsDb){
+
             return res.status(400).json({
-                mensaje:'No se encontro el registro',
+                mensaje:'no se encontro el registro',
                 error
             })
         }
-        res.json(roomsDb);
+        res.json(roomsDb)
+        
     } catch (error) {
         return res.status(400).json({
-            mensaje:'Ocurrio un error al borrar',
+            mensaje:'ocurrio un error al borrar',
+        })
+        
+    }
+});
+
+//PUT ACTUALIZAR MASCOTA
+router.put('/actualizar/:id', async(req, res)=>{
+    const _id = req.params.id;
+    const body = req.body;
+    try {
+        const roomsDb = await roomsBd.findByIdAndUpdate(
+            _id,
+            body,{new:true});
+            res.json(roomsDb);
+
+
+    } catch (error) {
+        return res.status(400).json({
+            mensaje:'ocurrio un error al actualizar',
             error
         })
     }
-})
+});
 //exportar la configuracion de express>
 module.exports=router
