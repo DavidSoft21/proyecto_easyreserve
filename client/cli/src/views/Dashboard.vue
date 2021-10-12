@@ -2,6 +2,7 @@
 <div class="dashboard">
     <h1>Bienvenido Master</h1>
     <b-button type="submit" variant="danger" @click="removerItem">cerrar sesion</b-button>
+    <b-button onclick='/Crear-habitacion.vue'>Crear habitación</b-button>
 
 
     <!--TABLA-->
