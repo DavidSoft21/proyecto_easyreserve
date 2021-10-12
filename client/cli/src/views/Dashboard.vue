@@ -41,13 +41,13 @@
 </template>
 
 <script>
-import Menu from "@/components/Menu.vue";
+
 
 export default {
 
     data() {
         return {
-          listaHab:[]//array
+          listaHab:[]//array o arreglo
         }
     },
 
