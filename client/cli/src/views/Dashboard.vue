@@ -1,113 +1,82 @@
 <template>
-<div class="dashboard">
+  <div class="dashboard">
     <h1>Bienvenido Master</h1>
-    <b-button type="submit" variant="danger" @click="removerItem">cerrar sesion</b-button>
-    <b-button onclick='/Crear-habitacion.vue'>Crear habitación</b-button>
-
-
+    <router-link to="/crear_habitacion">
+        <b-button>Crear habitación</b-button>
+    </router-link>
     <!--TABLA-->
     <div class="container">
-    <br>
-    <br>
-    <h4>Listado de habitaciones</h4>
-    <br>
-    <table class="table">
+      <br />
+      <br />
+      <h4>Listado de habitaciones</h4>
+      <br />
+      <table class="table">
         <thead>
-            <tr>
-                <th scope="col">Nombre habitacion</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Tipo hab</th>
-            </tr>
+          <tr>
+            <th scope="col">Nombre habitacion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Tipo hab</th>
+          </tr>
         </thead>
         <tbody>
-            <tr v-for="(item, index) in listaHab " :key="index">
-                <th scope="row" >{{item.nombre}}</th>
-                <td>{{item.precio}}</td>
-                <td>{{item.fecha}}</td>
-                <td>{{item.estado}}</td>
-                <td>{{item.tipo_hab}}</td>
-                
+          <tr v-for="(item, index) in listaHab" :key="index">
+            <th scope="row">{{ item.nombre }}</th>
+            <td>{{ item.precio }}</td>
+            <td>{{ item.fecha }}</td>
+            <td>{{ item.estado }}</td>
+            <td>{{ item.tipo_hab }}</td>
 
-                <td>
-
-                </td>
-            </tr>
+            <td></td>
+          </tr>
         </tbody>
-    </table>
+      </table>
     </div>
-
-</div>
+  </div>
 </template>
 
 <script>
-
-
 export default {
+  data() {
+    return {
+      listaHab: [], //array o arreglo
+    };
+  },
 
-    data() {
-        return {
-          listaHab:[]//array o arreglo
-        }
-    },
+  created() {
+    this.listarHabitaciones();
+  },
 
-    created(){
-      this.listarHabitaciones();
-    },
-
-
-
-    methods: {
-
-      listarHabitaciones(){//metodo
-        this.axios.get('/buscarTodo')
-        .then(res=>{
+  methods: {
+    listarHabitaciones() {
+      //metodo
+      this.axios
+        .get("/buscarTodo")
+        .then((res) => {
           console.log(res.data);
-          this.listaHab=res.data;
-
+          this.listaHab = res.data;
         })
-        .catch(e=>{
+        .catch((e) => {
           console.log(e.response);
-        })
-      },
-
-
-
-
-        removerItem() {
-            window.localStorage.removeItem("auth");
-            this.$router.push({
-                path: "/"
-            });
-        },
+        });
     },
+  },
 
+  components: {},
 
+  name: "Dashboard",
+  beforeCreate() {
+    console.log("metodo beforeCreate");
+    var auth = window.localStorage.getItem("auth");
+    console.log("su autentificacion esta :" + auth);
 
-
-    components: {
-
-    },
-
-
-
-
-
-    name: "Dashboard",
-    beforeCreate() {
-        console.log("metodo beforeCreate");
-        var auth = window.localStorage.getItem("auth");
-        console.log("su autentificacion esta :" + auth);
-
-        if (auth !== "ok") {
-            console.log("no logged");
-            this.$router.push({
-                path: "/login"
-            });
-        }
+    if (auth !== "ok") {
+      console.log("no logged");
+      this.$router.push({
+        path: "/login",
+      });
     }
-
-    
+  },
 };
 </script>

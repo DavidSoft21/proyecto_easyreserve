@@ -39,7 +39,7 @@
             </b-form-group>
             <div>
               <div>
-                 <router-link to="/crear_cuenta">Iniciar Sesion</router-link>
+                 <router-link to="/crear_cuenta">Registrarse</router-link>
               </div>
               <div>
                  <router-link to="/reset_password">Olvido su contraseña?</router-link>
