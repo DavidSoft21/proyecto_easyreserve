@@ -12,6 +12,8 @@
                 <th scope="col">TIPO HABITACION</th>
                 <th scope="col">DESCRIPCION</th>
                 <th scope="col">ACCION</th>-->
+                
+
 
                 <th scope="col">ID</th>
                 <th scope="col">NOTAS</th>
