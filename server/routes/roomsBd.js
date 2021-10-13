@@ -8,8 +8,8 @@ import roomsBd from '../models/roomsBd';
 
 
 //POS AGREGAR UN REGISTRO
-router.post('/nuevo-registro', async(req, res)=>{
-    const body= req.body;
+router.post('/nuevo-registro', async (req, res) => {
+    const body = req.body;
 
     try {
         const roomsBD = await roomsBd.create(body);
@@ -17,7 +17,7 @@ router.post('/nuevo-registro', async(req, res)=>{
 
     } catch (error) {
         return res.status(500).json({
-           mensaje: 'Upps! Error Inesperado durante la creacion de la habitacion',
+            mensaje: 'Upps! Error Inesperado durante la creacion de la habitacion',
             error
         });
     }
@@ -56,6 +56,7 @@ router.get('/buscarParametro/:id', async(req, res)=>{
 
 //DELETE PARAMETRO
 router.delete('/eliminarParametro/:id', async(req, res)=>{
+    
     const _id = req.params.id;
 
     try {
