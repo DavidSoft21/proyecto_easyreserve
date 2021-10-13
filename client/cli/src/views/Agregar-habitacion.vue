@@ -2,7 +2,11 @@
 <div class="container">
     <h1>listado de habitaciones</h1>
 
-    <b-alert :show="dismissCountDown" dismissible :variant="mensaje.color" @dismissed="dismissCountDown=0" @dismiss-count-down="countDownChanged">
+    <b-alert 
+    :show="dismissCountDown" 
+    dismissible :variant="mensaje.color" 
+    @dismissed="dismissCountDown=0" 
+    @dismiss-count-down="countDownChanged">
         {{mensaje.texto}}
     </b-alert>
 
@@ -23,6 +27,7 @@ export default {
 
     data() {
         return {
+            //listaHab: [],
             mensaje: {color: 'success',texto: ''},
             dismissSecs: 5,
             dismissCountDown: 0,
@@ -44,6 +49,31 @@ export default {
 
     methods: {
         agregarHabitacion() {
+            this.axios.post('/nuevo-registro',this.habitacion)
+            .then(res =>{
+                this.listaHab.push(res.data)
+                this.habitacion.nombre="";
+                this.habitacion.precio="";
+                this.habitacion.fecha="";
+                this.habitacion.estado="";
+                this.habitacion.tipo_hab="";
+                this.mensaje.color="succes";
+                this.mensaje.texto="Habitacion agregada con exito";
+                this.showAlert();
+            })
+            .catch(e=>{
+                console.log(e.response);
+            })
+        },
+
+        eliminarhabitacion(nombre){//pertenece a methods
+            this.axios.delete(`/habitacion/${nombre}`)
+            .then(res=>{
+                const index = this.listaHab.findIndex(item=> item.nombre==res.data.nombre)
+            })
+            .catch(e=>{
+                console.log(e.response);
+            })
 
         },
         countDownChanged(dismissCountDown) {
