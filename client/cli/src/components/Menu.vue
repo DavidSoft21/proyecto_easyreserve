@@ -113,7 +113,6 @@ export default {
   methods: {
 
     removerItem() {
-        login();
       window.localStorage.removeItem("auth");
       this.$router.push({
         path: "/",

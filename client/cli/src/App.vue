@@ -2,60 +2,13 @@
   <div class="inicio">
     <Menu />
 
-    <footer class="bg-secondary text-center text-white">
+    <footer class="bg-secondary text-center text-white" id="footer">
       <!-- Grid container -->
       <div class="container p-4">
 
         <!-- Section: Social media -->
         <section class="mb-4">
-          <!-- Facebook -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            >
-           <i class="bi bi-facebook"></i>
-            </a>
-
-          <!-- Twitter -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-twitter"></i
-          ></a>
-
-          <!-- Google -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-google"></i
-          ></a>
-
-          <!-- Instagram -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-instagram"></i
-          ></a>
-
-          <!-- Linkedin -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-
-          <!-- Github -->
-          <a
-            class="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-            ><i class="fab fa-github"></i
-          ></a>
+      
         </section>
         <!-- Section: Social media -->
 
@@ -103,10 +56,9 @@
         <!-- Section: Text -->
         <section class="mb-4">
           <p>
-            Easy reserve es una pagina web adaptable a cualquier establecimiento que brinde el servicio de alquiler de habitaciones.
-            la idea general es mostar un catalogo dividido es tres tipos de habitaciones, y que el cliente pueda escoger la que guste y reservarla 
-            para su uso. de momento solo esta habilitada la parte de funciones del usuario administrador. el cual permite crear las habitaciones,
-            cargarlas a un a base de datos y luego mostrarlas en un lista.
+            EasyReserve es una pagina web adaptable a cualquier establecimiento que brinde el servicio de alojamiento de habitaciones.
+            las cuales dividimos en tres tipos de habitaciones, para que el cliente pueda escoger la que más se adapte a sus gustos y reservarla 
+            para su uso Facil, Rapido y Sencillo.
           </p>
         </section>
         <!-- Section: Text -->
@@ -117,11 +69,10 @@
           <div class="row">
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-
+              <h5 class="text-uppercase">Github</h5>
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white">Link 1</a>
+                  <a href="https://github.com/DavidSoft21" class="text-white">E. David RM</a>
                 </li>
                 
               </ul>
@@ -130,11 +81,11 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-uppercase">Linkedin</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white">Link 1</a>
+                  <a href="#!" class="text-white">Cristian Portilla</a>
                 </li>
               </ul>
             </div>
@@ -142,11 +93,11 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-uppercase">Interacpedia</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white">Link 1</a>
+                  <a href="#!" class="text-white">Edwin Yara</a>
                 </li>
                 
               </ul>
@@ -155,11 +106,11 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-uppercase">Github</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white">Link 1</a>
+                  <a href="#!" class="text-white">Christian Torres</a>
                 </li>
                 
               </ul>
@@ -174,9 +125,9 @@
 
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
+        © 2021 Copyright:
+        <a class="text-white" href="#"
+          >Moto Moto</a
         >
       </div>
       <!-- Copyright -->
@@ -195,3 +146,10 @@ export default {
 };
 </script>
 
+<style>
+  #footer{
+
+    margin-top: 50px;
+
+  }
+</style>

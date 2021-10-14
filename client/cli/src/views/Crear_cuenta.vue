@@ -137,14 +137,19 @@ export default {
   accounts: [],
   methods: {
     registrarUsuario() {
-      this.axios
-        .post("/create/account", this.form)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      if (this.form.userPassword != this.form.confirmUserPassword) {
+        alert("las contraseñas son diferentes");
+      } else {
+        
+        this.axios
+          .post("/create/account", this.form)
+          .then((response) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
     },
   },
 };

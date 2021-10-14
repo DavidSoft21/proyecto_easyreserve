@@ -5,22 +5,23 @@
 
         <b-row>
             <b-col>
-               <b-img src="../assets/cristianT.jpeg" fluid alt="Responsive image"></b-img>
+               <b-img src="https://picsum.photos/250/250/?image=59" fluid alt="Responsive image"></b-img>
                 <h3>Cristian torres</h3>
                 <b-card-text>
                    Mi nombre es Cristian David Torres Olarte, soy de Barbosa santander tengo 24 años 
                    en la realizacion de este proyecto asumi el rol de miembro del equipo de desarrollo. 
-                  
-                   
                 </b-card-text>
             </b-col>
 
             <b-col>
                 <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
-                <h3>Cristian torres</h3>
+                <h3>E David RM</h3>
                  <b-card-text>
-                    This is a wider card with supporting text below as a natural lead-in to additional content.
-                    This content is a little bit longer.
+                    Soy David, vivo en la hermosa ciudad de cali 
+                    tengo 25 años, Actualmente me encuentro en proceso
+                    de formación en la universidad del valle. y espero
+                    pronto aportar desde mi area de conocimiento a las grandes
+                    industrias del sector tecnologico de mi pais
                 </b-card-text>
             </b-col>
 
@@ -36,10 +37,10 @@
 
             <b-col>
                 <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 4"></b-img>
-                <h3>Cristian torres</h3>
+                <h3>Cristian Portilla</h3>
                  <b-card-text>
-                    This is a wider card with supporting text below as a natural lead-in to additional content.
-                    This content is a little bit longer.
+                    Ingeniero Industrial, de la ciudad de Pasto card with supporting text below as a natural lead-in to additional content.
+                   .
                 </b-card-text>
             </b-col>
         </b-row>
