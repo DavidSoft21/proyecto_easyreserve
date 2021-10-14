@@ -63,15 +63,10 @@
             </p>
           </b-carousel-slide>
         </b-carousel>
-
-        <p class="mt-4">
-          Slide #: {{ slide }}<br />
-          Sliding: {{ sliding }}
-        </p>
       </div>
 
-      <img alt="Vue logo" src="../assets/logo.png" />
-      <h1>soy el inicio</h1>
+      <img alt="logo" src="../assets/logoe.png" />
+      <h3>Somos una empresa de reservación, ofrecemos un servicio facil, rapido y discreto ;)</h3>
     </b-container>
   </div>
 </template>

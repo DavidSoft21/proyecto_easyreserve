@@ -16,7 +16,7 @@
             </b-col>
 
             <b-col>
-                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=58" alt="Image 2"></b-img>
+                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
                 <h3>Cristian torres</h3>
                  <b-card-text>
                     This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -25,11 +25,12 @@
             </b-col>
 
             <b-col>
-                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
-                <h3>Cristian torres</h3>
+                <b-img thumbnail fluid src="https://cutt.ly/ERtiHEp" alt="Image 2"></b-img>
+                <h3>Edwin Yara</h3>
                  <b-card-text>
-                    This is a wider card with supporting text below as a natural lead-in to additional content.
-                    This content is a little bit longer.
+                    Soy Edwin Yara, soy de Bogotá tengo 18 años, soy diseñador multimedia y ilustrador 
+                    en la realización de este proyecto asumí el rol de miembro del equipo de desarrollo 
+                    fue mi primera vez programando una página web.
                 </b-card-text>
             </b-col>
 

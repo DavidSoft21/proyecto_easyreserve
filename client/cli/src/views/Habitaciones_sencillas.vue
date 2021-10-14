@@ -1,7 +1,8 @@
 <template>
+<b-container>
   <div>
-    <b-container>
-          <b-card
+    <h1>Habitaciones Sencillas</h1>
+    <b-card
       title="Habitacion sencilla"
       img-src="https://hotelseminariobilbao.com/wp-content/uploads/2017/08/02.Habitacion-Suite-1024x480.jpg"
       img-alt="Image"
@@ -14,10 +15,10 @@
         Esta habitacion cuenta con todo lo necesario para su estadia cuenta con, baño, cama, tv, escritorio, mesa de noche y mas.
       </b-card-text>
 
-      <b-button href="#" variant="primary">ver mas</b-button>
+      <b-button href="#" variant="primary">Reservar</b-button>
     </b-card>
-    </b-container>
   </div>
+</b-container>
 </template>
 
 <script>

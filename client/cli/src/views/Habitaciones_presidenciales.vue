@@ -1,7 +1,9 @@
 <template>
+<b-container>
   <div>
-    <b-container>
-          <b-card
+    <h1>Habitaciones Presidenciales</h1>
+
+    <b-card
       title="Habitación Presidencial"
       img-src="https://www.oceaniacruises.com/sites/default/files/marina-suit-and-state-rooms-hero-1024x480-oceania-suite.jpg"
       img-alt="Image"
@@ -14,10 +16,10 @@
         Habitacion presidencial, conteine todo lo que necesita y mas, se pueden hacer grandes reuniones y cuenta con servicio al cliente.
       </b-card-text>
 
-      <b-button href="#" variant="primary">ver mas</b-button>
+      <b-button href="#" variant="primary">Reservar</b-button>
     </b-card>
-    </b-container>
   </div>
+</b-container>
 </template>
 
 <script>
