@@ -5,7 +5,7 @@
 
         <b-row>
             <b-col>
-               <b-img src="https://picsum.photos/250/250/?image=59" fluid alt="Responsive image"></b-img>
+                <b-img thumbnail fluid src="https://bit.ly/3lC77zH" alt="Image 2"></b-img>
                 <h3>Cristian torres</h3>
                 <b-card-text>
                    Mi nombre es Cristian David Torres Olarte, soy de Barbosa santander tengo 24 años 
